@@ -1,8 +1,13 @@
+
 function functionFetch () {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Тирасполь,md&appid=6e1bd1b9727859bebfd04a95c84c3ab9')
-        .then(function(resp) {return resp.json()})
-        .then(function(data) {
-            // console.log(data);
+    const choiceCity = document.querySelector('.choice-city__enter').value;
+    const choiceLetterCode = document.querySelector('.choice-city__letter-code').value;
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${choiceCity},${choiceLetterCode}&appid=6e1bd1b9727859bebfd04a95c84c3ab9`)
+    .then(function(resp) {return resp.json()})
+    .then(function(data) {
+        console.log(data);
+        // console.log(choiceCity);
 // Город
             document.querySelector('.package-name').textContent = data.name;
 // Дневная температура
