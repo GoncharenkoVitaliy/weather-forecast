@@ -1,5 +1,5 @@
 function functionFetch () {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Кишинев,md&appid=6e1bd1b9727859bebfd04a95c84c3ab9')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Тирасполь,md&appid=6e1bd1b9727859bebfd04a95c84c3ab9')
         .then(function(resp) {return resp.json()})
         .then(function(data) {
             // console.log(data);
