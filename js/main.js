@@ -12,8 +12,8 @@ function functionFetch () {
             document.querySelector('.package-name').textContent = data.name;
 // Дневная температура
             document.querySelector('.price').innerHTML = Math.round(data.main.temp - 273) + '&deg' + 'C';
-// Дневная температура
-            document.querySelector('.feels_like').innerHTML = Math.round(data.main.feels_like - 273) + '&deg' + 'C';
+// Температура ощющается
+            document.querySelector('.feels__like').innerHTML = Math.round(data.main.feels_like - 273) + '&deg' + 'C';
 //Скорость ветра
             document.querySelector('.speed').textContent = `${data.wind.speed} м/с`;
 
